@@ -6,10 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/posts', (req, res) => {
-    fs.readFile(path.join(__dirname, 'data', 'blog_data.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'public', 'blog_data.json'), 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading blog data:', err);
             res.status(500).json({ error: 'Internal Server Error' });
@@ -35,7 +35,7 @@ app.post('/admin/addpost', (req, res) => {
         photo
     };
 
-    fs.readFile(path.join(__dirname, 'data', 'blog_data.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(__dirname, 'public', 'blog_data.json'), 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading blog data:', err);
             res.status(500).json({ error: 'Internal Server Error' });
@@ -46,7 +46,7 @@ app.post('/admin/addpost', (req, res) => {
             const jsonData = JSON.parse(data);
             jsonData.unshift(newPost); // Add new post at the beginning of the array
 
-            fs.writeFile(path.join(__dirname, 'data', 'blog_data.json'), JSON.stringify(jsonData), 'utf8', (writeErr) => {
+            fs.writeFile(path.join(__dirname, 'public', 'blog_data.json'), JSON.stringify(jsonData), 'utf8', (writeErr) => {
                 if (writeErr) {
                     console.error('Error writing blog data:', writeErr);
                     res.status(500).json({ error: 'Internal Server Error' });
