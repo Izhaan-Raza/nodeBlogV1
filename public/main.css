@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap');
+
+
+/* Reset styles */
+html, body, div, h1, h2, p, img, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    color: #333;
+    background-color: #ffcc93;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.photo{
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    /* center align */
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.about{
+    height: auto;
+    width: 95%;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: smaller;
+    
+    
+}
+
+.naaam{
+    align-self: flex-start;
+    font-size: 40px;
+    
+}
+
+.abt{
+    font-size: 14px;
+}
+
+
+header {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+    /* webkit blur */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;    
+    position: fixed;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.name{
+    position: fixed;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Dancing Script", cursive;
+    display: none;
+    font-weight: 700;
+    top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    z-index: 2;
+    transition: all 2s ease;
+    visibility: hidden;
+}
+
+
+
+.hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 80px;
+    background: url(../assets/banner.jpeg) no-repeat center center/cover;
+    transition: all 0.5s ease;
+}
+
+
+
+.pfp {
+    position: fixed;
+    z-index: 1;
+    margin-left: 10px;
+    top: 40px;
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0px 10px rgba(223, 223, 223, 0.685);
+    transition: all 0.5s ease;
+    right: 10px;
+    
+}
+
+.pfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #ffbf75;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card p {
+    padding: 0px;
+    margin: 0;
+    line-height: 22px;
+    
+}
+
+.card h2 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.card p.date {
+    color: #2e2e2e;
+    font-style: italic;
+    align-self: flex-end;
+    font-size: smaller;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .header{
+        width: 20px;
+    }
+}

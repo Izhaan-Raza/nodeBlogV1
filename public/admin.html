@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Add New Blog Post</h1>
+
+    <form id="blogForm">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="4" required></textarea><br>
+
+        <label for="photo">Photo URL:</label><br>
+        <input type="text" id="photo" name="photo" required><br>
+
+        <label for="date">Date:</label><br>
+        <input type="text" id="date" name="date" value="2024-03-16  02:04 A.M." required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="admin.js"></script>
+</body>
+</html>
