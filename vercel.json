@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/posts", "dest": "/server.js" },
+      { "src": "/admin/addpost", "dest": "/server.js" }
+    ]
+  }
+  
